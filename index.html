@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr.Bean</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="image">
+        <img src="https://blog.adobe.com/en/publish/2017/06/06/media_1c9f7c6b3a4666de1839ccb58ba16c968123dbc3e.png?width=750&format=png&optimize=medium" style="position: absolute;" width="1000px" height="600px">
+        <div class="eyel">
+               <div class="pupill">
+               </div>
+        </div>
+        <div class="eyer">
+            <div class="pupilr"></div>
+        </div>
+    </div>
+    <script>
+        const eyel = document.querySelector('.pupill');
+        const eyer = document.querySelector('.pupilr')
+        window.addEventListener('mousemove', (evt) => {
+            const x = -(window.innerWidth  - evt.pageX) / 1000;
+            const y = -(window.innerHeight  - evt.pageY) / 1000;
+            eyel.style.transform = `translateY(${y*60}px) translateX(${x*60}px)`;
+            eyer.style.transform = `translateY(${y*60}px) translateX(${x*60}px)`;
+            eyel.style.left = "80px"
+            eyer.style.left = "80px"
+            eyel.style.top = "60px"
+            eyer.style.top = "60px"
+        });
+    </script>
+</body>
+</html>
